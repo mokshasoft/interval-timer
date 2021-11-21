@@ -15,8 +15,8 @@ gong () {
 while [ true ] ; do
     echo "active"
     gong 3 &
-    sleep 10
+    sleep $1
     echo -e "rest\n"
     gong 2 &
-    sleep 5
+    sleep $2
 done
