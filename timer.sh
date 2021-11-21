@@ -1,7 +1,7 @@
 #!/bin/bash
 
-TRAIN=$1
-REST=$2
+TRAIN=${1:-300}
+REST=${2:-60}
 
 gong () {
     NBR=$1
@@ -15,8 +15,8 @@ gong () {
 while [ true ] ; do
     echo "active"
     gong 3 &
-    sleep $1
+    sleep $TRAIN
     echo -e "rest\n"
     gong 2 &
-    sleep $2
+    sleep $REST
 done
