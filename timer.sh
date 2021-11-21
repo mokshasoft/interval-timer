@@ -7,7 +7,7 @@ gong () {
     NBR=$1
     for i in $(seq 1 $NBR)
     do
-        play -q gong.flac &
+        play -V0 -q gong.flac &
 	sleep .3
     done
 }
